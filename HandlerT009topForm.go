@@ -26,6 +26,7 @@ import (
 	配信中のルームを開始時刻の降順にソートして表示するためのハンドラー
 
 	Ver. 0.1.0
+	Ver. 0.4.0 デフォルトの表示カテゴリーをFreeからOfficialに変更する。
 
 */
 
@@ -61,7 +62,7 @@ func HandlerT009topForm(
 
 	top := T009top{
 		SR_acct:      "999999",
-		Category:     "Free",
+		Category:     "Official",
 		Aplmin:       240,
 		Maxnoroom:    20,
 		Rvlfilename:  "rvl.txt",
