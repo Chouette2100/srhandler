@@ -57,7 +57,7 @@ func HandlerApiRoomStatus(
 	}
 
 	// テンプレートをパースする
-	tpl := template.Must(template.New("").Funcs(funcMap).ParseFiles("templates/apiroomstatus.gtpl"))
+	tpl := template.Must(template.New("").Funcs(funcMap).ParseFiles("templates/apiroomstatus.gtpl", "templates/footer.gtpl"))
 
 	url := r.FormValue("room_url_key")
 	if url == "" {
