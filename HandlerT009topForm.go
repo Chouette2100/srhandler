@@ -96,7 +96,7 @@ func HandlerT009topForm(
 	}
 
 	// テンプレートをパースする
-	tpl := template.Must(template.New("").Funcs(funcMap).ParseFiles("templates/t009top.gtpl"))
+	tpl := template.Must(template.New("").Funcs(funcMap).ParseFiles("templates/t009top.gtpl", "templates/footer.gtpl"))
 
 	category := r.FormValue("category")
 	if category != "" {

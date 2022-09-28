@@ -58,7 +58,7 @@ func HandlerT008topForm(
 	}
 
 	// テンプレートをパースする
-	tpl := template.Must(template.New("").Funcs(funcMap).ParseFiles("templates/t008top.gtpl"))
+	tpl := template.Must(template.New("").Funcs(funcMap).ParseFiles("templates/t008top.gtpl", "templates/footer.gtpl"))
 
 	// テンプレートに埋め込むデータ（ポイントやランク）を作成する
 	top := new(T008top)
