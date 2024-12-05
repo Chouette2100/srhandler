@@ -133,13 +133,13 @@ func HandlerApiEventRoomList(
 					//	順位、ポイント、上位との差とイベント名、イベントのURLを取得する。
 					//	DBを使っているときはイベント名とイベントのURLはイベントマスターから取得すべき。
 					erl.Roomlistinf.RoomList[i].Point, erl.Roomlistinf.RoomList[i].Rank, erl.Roomlistinf.RoomList[i].Gap,
-						_, erl.Eventurl, erl.Eventname, err = srapi.GetPointByApi(client, room.Room_id)
+						_, erl.Eventurl, erl.Eventname, _, err = srapi.GetPointByApi(client, room.Room_id)
 					//	erl.Roomlistinf.RoomList[i].Gap = -1
 				} else {
 					//	2番目以降のルーム
 					//	順位、ポイント、上位との差を取得する。
 					erl.Roomlistinf.RoomList[i].Point, rank, erl.Roomlistinf.RoomList[i].Gap,
-						_, _, _, err = srapi.GetPointByApi(client, room.Room_id)
+						_, _, _, _, err = srapi.GetPointByApi(client, room.Room_id)
 					if rank == lrank {
 						erl.Roomlistinf.RoomList[i].Rank = -1
 					} else {
